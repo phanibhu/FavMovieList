@@ -11,6 +11,7 @@ public class MoviesList {
 
 
     public void addMovie(FavMovies favMovies){
+
         movie.add(favMovies);
 
     }
