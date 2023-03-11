@@ -49,7 +49,7 @@ public class MoviesListTest {
         Assert.assertEquals(2, moviesList.getMoviesList().size());
         Assert.assertEquals(favMovies1, moviesList.getMoviesList().get(0));
 
-        Assert.assertEquals(favMovies2, moviesList.getMoviesList().get(1));
+        Assert.assertEquals(favMovies2 , moviesList.getMoviesList().get(1));
     }
 
 }
