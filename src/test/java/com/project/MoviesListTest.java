@@ -1,0 +1,28 @@
+package com.project;
+
+import com.project.favmovies.FavMovies;
+import com.project.favmovies.MoviesList;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import java.util.ArrayList;
+
+public class MoviesListTest {
+
+    @Test
+    public void getFavMovieList(){
+        MoviesList moviesList = new MoviesList();
+        FavMovies favMovies1 = new FavMovies("pushpa");
+        FavMovies favMovies2 = new FavMovies("ASVR");
+        FavMovies favMovies3 = new FavMovies("Jalsa");
+        FavMovies favMovies4 = new FavMovies("OG");
+        moviesList.addMovie(favMovies1);
+        moviesList.addMovie(favMovies2);
+        moviesList.addMovie(favMovies3);
+        Assert.assertEquals(3, moviesList.getMoviesList().size());
+        Assert.assertEquals(favMovies1, moviesList.getMoviesList().get(0));
+        Assert.assertEquals(favMovies2, moviesList.getMoviesList().get(1));
+        Assert.assertEquals(favMovies3, moviesList.getMoviesList().get(2));
+    }
+
+}
